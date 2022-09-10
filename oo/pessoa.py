@@ -18,4 +18,8 @@ if __name__ == '__main__':
     print(israel.idade)
     for filho in isaque.filhos:
         print(filho.nome)
+    isaque.sobrenome = "Oliveira"   #Adicionando atributo em tempo de execução
+    del isaque.filhos   #Removendo atributo em tempo de execução
+    print(isaque.__dict__)
+    print(israel.__dict__)
 
