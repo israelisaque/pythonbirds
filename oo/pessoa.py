@@ -1,4 +1,6 @@
 class Pessoa:
+    olhos = 2
+
     def __init__(self, *filhos, nome=None, idade=35):
         self.idade = idade
         self.nome = nome
@@ -20,6 +22,10 @@ if __name__ == '__main__':
         print(filho.nome)
     isaque.sobrenome = "Oliveira"   #Adicionando atributo em tempo de execução
     del isaque.filhos   #Removendo atributo em tempo de execução
-    print(isaque.__dict__)
+    print(isaque.__dict__)   #__dict__ exibe os atributos de instância
     print(israel.__dict__)
+    print(Pessoa.olhos)
+    print(israel.olhos)
+    print(isaque.olhos)
+    print(id(Pessoa.olhos), id(israel.olhos), id(isaque.olhos))
 
